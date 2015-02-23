@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainTableViewController : UITableViewController
+
+@interface MainTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property(strong, nonatomic)NSMutableArray *dataArray;
+@property(strong, nonatomic)NSURL *videoURL;
 
 @end
