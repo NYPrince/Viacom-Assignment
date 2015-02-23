@@ -15,6 +15,7 @@
 		C73A3E671A9BAEB4005DAB5E /* ViacomAssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E661A9BAEB4005DAB5E /* ViacomAssignmentTests.m */; };
 		C73A3E721A9BB294005DAB5E /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E711A9BB294005DAB5E /* MainTableViewController.m */; };
 		C73A3E751A9BB3B4005DAB5E /* Prototype.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E741A9BB3B4005DAB5E /* Prototype.m */; };
+		C73A3E781A9BCCBA005DAB5E /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E771A9BCCBA005DAB5E /* Record.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		C73A3E711A9BB294005DAB5E /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		C73A3E731A9BB3B4005DAB5E /* Prototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prototype.h; sourceTree = "<group>"; };
 		C73A3E741A9BB3B4005DAB5E /* Prototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prototype.m; sourceTree = "<group>"; };
+		C73A3E761A9BCCBA005DAB5E /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		C73A3E771A9BCCBA005DAB5E /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				C73A3E541A9BAEB3005DAB5E /* Main.storyboard */,
 				C73A3E731A9BB3B4005DAB5E /* Prototype.h */,
 				C73A3E741A9BB3B4005DAB5E /* Prototype.m */,
+				C73A3E761A9BCCBA005DAB5E /* Record.h */,
+				C73A3E771A9BCCBA005DAB5E /* Record.m */,
 				C73A3E701A9BB294005DAB5E /* MainTableViewController.h */,
 				C73A3E711A9BB294005DAB5E /* MainTableViewController.m */,
 				C73A3E571A9BAEB3005DAB5E /* Images.xcassets */,
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73A3E781A9BCCBA005DAB5E /* Record.m in Sources */,
 				C73A3E751A9BB3B4005DAB5E /* Prototype.m in Sources */,
 				C73A3E501A9BAEB3005DAB5E /* AppDelegate.m in Sources */,
 				C73A3E4D1A9BAEB3005DAB5E /* main.m in Sources */,
