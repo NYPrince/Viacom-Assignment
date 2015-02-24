@@ -9,7 +9,7 @@
 #import "MainTableViewController.h"
 #import "Record.h"
 #import "Prototype.h"
-
+#import "VideoViewController.h"
 
 
 static NSString *CellIdentifier = @"Cell";
@@ -57,7 +57,7 @@ static NSString *CellIdentifier = @"Cell";
                 NSDictionary *dictionary = [records objectAtIndex:i];
                 
                 
-                NSLog(@"%@", dictionary);
+               // NSLog(@"%@", dictionary);
                 Record *recordData = [self createRecord:dictionary];
                 
                 
@@ -130,6 +130,11 @@ static NSString *CellIdentifier = @"Cell";
         return cell;
     }
     
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    ((VideoViewController*)segue.destinationViewController).url = self.videoURL;
+    
+}
 
 
 

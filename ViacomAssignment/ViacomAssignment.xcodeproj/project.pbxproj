@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C73A3E4D1A9BAEB3005DAB5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E4C1A9BAEB3005DAB5E /* main.m */; };
 		C73A3E501A9BAEB3005DAB5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E4F1A9BAEB3005DAB5E /* AppDelegate.m */; };
-		C73A3E561A9BAEB3005DAB5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73A3E541A9BAEB3005DAB5E /* Main.storyboard */; };
 		C73A3E581A9BAEB3005DAB5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73A3E571A9BAEB3005DAB5E /* Images.xcassets */; };
 		C73A3E5B1A9BAEB3005DAB5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C73A3E591A9BAEB3005DAB5E /* LaunchScreen.xib */; };
 		C73A3E671A9BAEB4005DAB5E /* ViacomAssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E661A9BAEB4005DAB5E /* ViacomAssignmentTests.m */; };
@@ -18,6 +17,7 @@
 		C73A3E781A9BCCBA005DAB5E /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E771A9BCCBA005DAB5E /* Record.m */; };
 		C73A3E7B1A9BF0D7005DAB5E /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C73A3E7A1A9BF0D7005DAB5E /* VideoViewController.m */; };
 		C73A3E7D1A9BF175005DAB5E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73A3E7C1A9BF175005DAB5E /* MediaPlayer.framework */; };
+		C73A3E841A9C338B005DAB5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73A3E821A9C338B005DAB5E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 		C73A3E4C1A9BAEB3005DAB5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C73A3E4E1A9BAEB3005DAB5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C73A3E4F1A9BAEB3005DAB5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C73A3E551A9BAEB3005DAB5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C73A3E571A9BAEB3005DAB5E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C73A3E5A1A9BAEB3005DAB5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C73A3E601A9BAEB4005DAB5E /* ViacomAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViacomAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +50,7 @@
 		C73A3E791A9BF0D7005DAB5E /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		C73A3E7A1A9BF0D7005DAB5E /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		C73A3E7C1A9BF175005DAB5E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C73A3E831A9C338B005DAB5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 		C73A3E491A9BAEB3005DAB5E /* ViacomAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				C73A3E541A9BAEB3005DAB5E /* Main.storyboard */,
+				C73A3E821A9C338B005DAB5E /* Main.storyboard */,
 				C73A3E791A9BF0D7005DAB5E /* VideoViewController.h */,
 				C73A3E7A1A9BF0D7005DAB5E /* VideoViewController.m */,
 				C73A3E701A9BB294005DAB5E /* MainTableViewController.h */,
@@ -218,7 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73A3E561A9BAEB3005DAB5E /* Main.storyboard in Resources */,
+				C73A3E841A9C338B005DAB5E /* Main.storyboard in Resources */,
 				C73A3E5B1A9BAEB3005DAB5E /* LaunchScreen.xib in Resources */,
 				C73A3E581A9BAEB3005DAB5E /* Images.xcassets in Resources */,
 			);
@@ -266,20 +266,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C73A3E541A9BAEB3005DAB5E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C73A3E551A9BAEB3005DAB5E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C73A3E591A9BAEB3005DAB5E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C73A3E5A1A9BAEB3005DAB5E /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		C73A3E821A9C338B005DAB5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C73A3E831A9C338B005DAB5E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

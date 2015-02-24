@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="etG-WC-kMb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Au9-eD-39m">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -8,7 +8,8 @@
         <scene sceneID="gpK-rC-fwM">
             <objects>
                 <tableViewController storyboardIdentifier="main" id="etG-WC-kMb" customClass="MainTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uif-zS-itN" customClass="Cell">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uif-zS-itN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -49,7 +50,6 @@
                                 <connections>
                                     <outlet property="image" destination="qpC-Ym-bMM" id="3Rx-f8-pZy"/>
                                     <outlet property="userName" destination="TzW-6E-wHc" id="ErU-Tr-KIS"/>
-                                    <segue destination="G4T-Eq-BM2" kind="show" identifier="toVideo" id="Jac-17-8UT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,11 +62,12 @@
                     <navigationItem key="navigationItem" id="xJo-2E-BoB"/>
                     <connections>
                         <outlet property="tableView" destination="Uif-zS-itN" id="rxk-tx-pBA"/>
+                        <segue destination="G4T-Eq-BM2" kind="show" identifier="toVideo" id="VFh-wo-sPn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xm-5p-2Yf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391.5" y="313"/>
+            <point key="canvasLocation" x="217.5" y="305"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="LKB-qj-FT1">
@@ -77,13 +78,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Ozi-A2-u31"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Suc-uD-E4k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gn1-Fx-ahv">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="6" y="-8" width="400" height="600"/>
+                                    <rect key="frame" x="0.0" y="-8" width="400" height="600"/>
                                 </variation>
                             </webView>
                         </subviews>
@@ -99,19 +101,23 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="gn1-Fx-ahv" id="uIF-Ue-ZLD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X49-Qh-jHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147.5" y="313"/>
+            <point key="canvasLocation" x="1024.5" y="294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WIL-qi-LxY">
             <objects>
-                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="Au9-eD-39m" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Au9-eD-39m" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="igv-ZF-iUJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -123,7 +129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHt-Is-apa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346.5" y="313"/>
+            <point key="canvasLocation" x="-640.5" y="305"/>
         </scene>
     </scenes>
 </document>
