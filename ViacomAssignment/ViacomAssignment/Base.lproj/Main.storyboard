@@ -7,7 +7,7 @@
         <!--Main Table View Controller-->
         <scene sceneID="gpK-rC-fwM">
             <objects>
-                <tableViewController id="etG-WC-kMb" customClass="MainTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="main" id="etG-WC-kMb" customClass="MainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uif-zS-itN" customClass="Cell">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,6 +49,7 @@
                                 <connections>
                                     <outlet property="image" destination="qpC-Ym-bMM" id="3Rx-f8-pZy"/>
                                     <outlet property="userName" destination="TzW-6E-wHc" id="ErU-Tr-KIS"/>
+                                    <segue destination="G4T-Eq-BM2" kind="show" identifier="toVideo" id="Jac-17-8UT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,10 +68,49 @@
             </objects>
             <point key="canvasLocation" x="391.5" y="313"/>
         </scene>
+        <!--Video View Controller-->
+        <scene sceneID="LKB-qj-FT1">
+            <objects>
+                <viewController storyboardIdentifier="Video" id="G4T-Eq-BM2" customClass="VideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="APo-Qq-Gt9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ozi-A2-u31"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Suc-uD-E4k">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gn1-Fx-ahv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="6" y="-8" width="400" height="600"/>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gn1-Fx-ahv"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gn1-Fx-ahv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="gn1-Fx-ahv" id="uIF-Ue-ZLD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X49-Qh-jHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147.5" y="313"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="WIL-qi-LxY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Au9-eD-39m" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="Au9-eD-39m" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="igv-ZF-iUJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -83,7 +123,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHt-Is-apa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274.5" y="317"/>
+            <point key="canvasLocation" x="-346.5" y="313"/>
         </scene>
     </scenes>
 </document>
