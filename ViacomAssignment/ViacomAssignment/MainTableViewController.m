@@ -34,19 +34,16 @@ static NSString *CellIdentifier = @"Cell";
         
         
         NSURLResponse * response = nil;
-        NSError * error = nil;
         
         NSURL *url = [NSURL URLWithString:@"https://vine.co/api/timelines/users/918753190470619136"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         
-        NSData * data = [NSURLConnection sendSynchronousRequest:request
-                                              returningResponse:&response
-                                                          error:&error];
-        if (error == nil)
-        {
+        
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *jdata, NSError *connectionError) {
+            //
             // Parse data here
-            NSDictionary *object = [ NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSDictionary *object = [ NSJSONSerialization JSONObjectWithData:jdata options:0 error:nil];
             NSDictionary *data = [object objectForKey:@"data"];
             NSArray *records = [data objectForKey:@"records"];
             
@@ -57,18 +54,15 @@ static NSString *CellIdentifier = @"Cell";
                 NSDictionary *dictionary = [records objectAtIndex:i];
                 
                 
-               // NSLog(@"%@", dictionary);
+                // NSLog(@"%@", dictionary);
                 Record *recordData = [self createRecord:dictionary];
                 
                 
                 [_dataArray addObject:recordData];
                 
             }
-            
-            
-        }
-        
-        [self.tableView reloadData];
+            [self.tableView reloadData];
+        } ];
         
     }
 

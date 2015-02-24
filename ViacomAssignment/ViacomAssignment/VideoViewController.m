@@ -15,18 +15,13 @@
     
     [super viewDidLoad];
     
-    self.moviePlayerViewController = [[MPMoviePlayerViewController alloc]initWithContentURL:_url];
+   self.moviePlayerViewController = [[MPMoviePlayerViewController alloc]initWithContentURL:self.url];
     
     
-    //[[self.moviePlayerViewController view] setFrame:[self.view.window bounds]];
-    self.moviePlayerViewController.moviePlayer.shouldAutoplay = YES;
+     self.moviePlayerViewController.moviePlayer.shouldAutoplay = YES;
 
     [self.view addSubview:self.moviePlayerViewController.view];
-    
-    //[self.moviePlayerViewController.moviePlayer prepareToPlay];
-    
-    
-    
+   
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
